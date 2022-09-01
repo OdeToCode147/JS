@@ -63,6 +63,33 @@ Select:focus{
     color: white;
     z-index: 1;
 }
+.Message-text-After{
+    position: relative;
+    left: 134px;
+    bottom: 60px;
+    font-family: 'Lilita One';font-size: 32px;
+    font-weight: lighter;
+    color: white;
+    z-index: 1;
+}
+.Message-text-Even{
+    position: relative;
+    left: 270px;
+    bottom: 60px;
+    font-family: 'Lilita One';font-size: 32px;
+    font-weight: lighter;
+    color: white;
+    z-index: 1;
+}
+.Message-text-Night{
+    position: relative;
+    left: 290px;
+    bottom: 60px;
+    font-family: 'Lilita One';font-size: 32px;
+    font-weight: lighter;
+    color: white;
+    z-index: 1;
+}
 .Set{
     margin: 0px 0px 0px 125px;
     width: 300px;
@@ -204,12 +231,56 @@ Select:focus{
     position: relative;
     top: 40px;
 }
-.Activity-Image{
+.Activity-Text-Even{
+    position: relative;
+    top: 24px;
+}
+.Activity-Image-Morn{
     margin: 0px 0px 0px 125px;
     width: 535px;
     height: 290px;
     background-color: white;
     background-image: url(./Component\ 30\ –\ 1.svg);
+    background-size: cover;
+    position: relative;
+    bottom: 810px;
+    left: 710px;
+    border-radius: 10px;
+    border: #EDEDED 1px solid;
+}
+.Activity-Image-Afte{
+    margin: 0px 0px 0px 125px;
+    width: 535px;
+    height: 290px;
+    background-color: white;
+    background-image: url(./Component\ 31\ –\ 1.svg);
+    background-size: cover;
+    position: relative;
+    bottom: 810px;
+    left: 710px;
+    border-radius: 10px;
+    border: #EDEDED 1px solid;
+}
+.Activity-Image-Even{
+    margin: 0px 0px 0px 125px;
+    width: 535px;
+    height: 290px;
+    background-color: white;
+    background-image: url(./lunch_image@2x.png);
+    background-size: cover;
+    position: relative;
+    bottom: 810px;
+    left: 710px;
+    border-radius: 10px;
+    border: #EDEDED 1px solid;
+}
+.Activity-Image-Nigh{
+    margin: 0px 0px 0px 125px;
+    width: 535px;
+    height: 290px;
+    background-color: white;
+    background-image: url(./Component\ 32\ –\ 1.svg);
+    background-size: cover;
     position: relative;
     bottom: 810px;
     left: 710px;
