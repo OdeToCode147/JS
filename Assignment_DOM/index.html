@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+<h1>
+    DOM ASSIGNMENT
+</h1>
+<br>
+<div id="text">
+    Element with Id as test
+</div>
+<br>
+<div class="box">
+    Element with Class as box
+</div>
+<br>
+<h1>
+    Hello
+</h1>
+<br>
+<button onclick="ChangeText()">Change Text</button>
+<br>
+<div class="flex-container">
+    <div class="flex-item">1</div>
+    <div class="flex-item">2</div>
+    <div class="flex-item">3</div>
+</div>
+<br>
+<button onclick="ChangeDirection()">Change Flex direction</button>
+<br>
+<h1 id="Color">Hello</h1>
+<button onclick="ChangeColor()">Change Color of the Text</button>
+<br>
+<p style="font-weight: bold; font-size: large;">
+    Hello world
+</p>
+<button onclick="ReplaceText()">Replace Text</button>
+<br>
+<br>
+<div class="clock">TIME:</div>
+<div class="time">
+    <span id="hours">00</span>
+    <span>:</span>
+    <span id="minutes">00</span>
+    <span>:</span>
+    <span id="seconds">00</span>
+    <span id="ampm">AM</span>
+</div>
+<br>
+<div class="dropdown">
+<select name="" onchange="yrch()" id="yrselect">
+    <option>Select Year</option>
+    <option value="2016-2017">2016-2017</option>
+    <option value="2017-2018">2016-2017</option>
+    <option value="2018-2019">2016-2017</option>
+    <option value="2019-2020">2016-2017</option>
+    <option value="2020-2021">2016-2017</option>
+    <option value="2021-2022">2016-2017</option>
+</select>
+</div>
+<br>
+<div class="year"> <b>The Selected Year is :</b><span id="year"> </span></div>
+<br>
+<form action="#" class="form">
+    <label for="name">Name:</label>
+    <input type="text" name="name" id="name" placeholder="Enter Your Name" required>
+    <br><br>
+    <label for="email">E-mail:</label>
+    <input type="email" name="email" id="email" required oninput="CheckEmail()" placeholder="@prepbytes.com">
+    <span id="emailcheck" class="check">Domain Should be prepbytes.com!</span>
+    <br><br>
+    <label for="contact">Contact No.</label>
+    <input type="number" name="contact" id="contact" required oninput="CheckNumber()" placeholder="Enter Your Number">
+    <span class="check" id="startcheck">Number must start with 91.</span>
+    <span class="check" id="digitcheck">Number must be only of 10 digits.</span>
+    <br><br>
+    <label for="birthyear">Birth Year:</label>
+    <input type="number" name="birthyear" id="birthyear" oninput="CheckBirth()" required placeholder="Enter your Birth Year">
+    <span class="check" id="birthyearcheck">Birth Year Should be after 1995</span>
+    <br><br>
+    <input onclick="check()" type="submit" value="Submit">
+</form>
+
+<script src="./index.js"></script>
+</body>
+</html>
