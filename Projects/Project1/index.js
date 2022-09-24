@@ -8,6 +8,9 @@ function time(){
     var mins=time.getMinutes();
     var secs=time.getSeconds();
     var am_pm ="AM";
+    if(12 <= hrs && hrs < 24){
+        am_pm = "PM"
+    }
     if(hrs==0){
         hrs=12;
     }
@@ -22,9 +25,6 @@ function time(){
     }
     if(secs<10){
         secs="0"+secs;
-    }
-    if(12 <= hrs && hrs < 24){
-        am_pm = "PM"
     }
     hours.innerText=hrs;
     minutes.innerText=mins;
