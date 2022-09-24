@@ -1,73 +1,335 @@
-function time(){
-    var hours=document.getElementById("Hours");
-    var minutes=document.getElementById("Minutes");
-    var seconds=document.getElementById("Seconds");
-    var ampm=document.getElementById("AMPM");
-    var time=new Date();
-    var hrs=time.getHours();
-    var mins=time.getMinutes();
-    var secs=time.getSeconds();
-    var am_pm ="PM";
-    let mssgtext=document.getElementById("Messagetext")
-    let acttext=document.getElementById("ActivityText")
-    let actImg=document.getElementById("ActivityImage")
-    if(hrs=>6 && hrs<12){
-        mssgtext.innerText = "GOOD MORNING!! WAKE UP!!"
-        acttext.innerText = "GRAB SOME HEALTHY BREAKFAST!!!"
-        actImg.style.backgroundImage= "url('./Component\ 30\ –\ 1.svg')";
-    }
-    if(hrs=>12 && hrs<17){
-        mssgtext.innerText = "GOOD AFTERNOON !! TAKE SOME SLEEP"
-        acttext.innerText = "LET'S HAVE SOME LUNCH !!"
-        actImg.style.backgroundImage= "url('./Component\ 31\ –\ 1.svg')";
-    }
-    if(hrs=>17 && hrs<19){
-        mssgtext.innerText = "GOOD EVENING !!"
-        acttext.innerText = "STOP YAWNING, GET SOME TEA.. ITS JUST EVENING!"
-        actImg.style.backgroundImage= "url('./lunch_image@2x.png')";
-    }
-    if(hrs=>19 && hrs<6){
-        mssgtext.innerText = "GOOD NIGHT !!"
-        acttext.innerText = "CLOSE YOUR EYES AND GO TO SLEEP"
-        actImg.style.backgroundImage= "url('./Component\ 32\ –\ 1.svg')";
-    }
-    if(hrs==0){
-        hrs=12;
-    }
-    if(hrs>12){
-        hrs=hrs-12;
-        am_pm="PM"
-    }
-    if(hrs<10){
-        hrs="0"+hrs;
-    }
-    if(mins<10){
-        mins="0"+mins;
-    }
-    if(secs<10){
-        secs="0"+secs;
-    }
-    Hours.innerText=hrs;
-    Minutes.innerText=mins;
-    Seconds.innerText=secs;
-    AMPM.innerText=am_pm;
+html , body{
+    background-color: #3D087B;
 }
-setInterval(time , 1000)
-time();
-
-
-
-
-function Execute(){
-    let Wake=document.getElementById("Selectmorn").value;
-    document.getElementById("WUT").innerText = "Wake-Up Time : "+Wake;
-
-    let lunch=document.getElementById("Selectlunch").value;
-    document.getElementById("LT").innerText = "Lunch Time : "+lunch;
-
-    let nap=document.getElementById("Selectnap").value;
-    document.getElementById("NT").innerText = "Nap Time : "+nap;
-
-    let night=document.getElementById("Selectnight").value;
-    document.getElementById("NIT").innerText = "Night Time : "+night;
+.logo{
+    margin: 20px 0px 0px 125px;
+}
+.selector{
+    background-color: white;
+    margin: 30px 0px 0px 125px;
+    display: inline-block;
+    width: 565px;
+    height: 365px;
+    border: #EDEDED 1px solid;
+    border-radius: 10px;
+}
+.Sel-Img{
+    position: relative;
+    top: 12px;
+    margin-left: 20px ;
+}
+.Gap{
+    margin-top: 15px;
+    margin-left: 38px;
+    border-left: 2px black solid;
+    height: 40px;
+}
+.Dialogue{
+    margin: 0px 30px 0px 25px;
+    color: #3D087B;
+}
+.form-gen{
+    display: inline-block;
+}
+Select{
+    width: 300px;
+    border: #EDEDED 1px solid;
+    padding: 5px;
+    border-radius: 4px;
+    color: #3D087B;
+}
+Select:focus{
+    color: black;
+}
+.Dialogue-Lunch{
+    margin-right: 48px;
+}
+.Dialogue-Nap{
+    margin-right: 59px;
+}
+.Dialogue-Night{
+    margin-right: 50px;
+}
+.Message{
+    background-color: white;
+    margin: 20px 0px 0px 125px;
+    width: 565px;
+    height: 80px;
+    border: #EDEDED 1px solid;
+    border-radius: 10px;
+    opacity: 0.23;
+    z-index: 0;
+}
+.Message-text{
+    position: relative;
+    left: 200px;
+    bottom: 60px;
+    font-family: 'Lilita One';font-size: 32px;
+    font-weight: lighter;
+    color: white;
+    z-index: 1;
+}
+.Message-text-After{
+    position: relative;
+    left: 134px;
+    bottom: 60px;
+    font-family: 'Lilita One';font-size: 32px;
+    font-weight: lighter;
+    color: white;
+    z-index: 1;
+}
+.Message-text-Even{
+    position: relative;
+    left: 270px;
+    bottom: 60px;
+    font-family: 'Lilita One';font-size: 32px;
+    font-weight: lighter;
+    color: white;
+    z-index: 1;
+}
+.Message-text-Night{
+    position: relative;
+    left: 290px;
+    bottom: 60px;
+    font-family: 'Lilita One';font-size: 32px;
+    font-weight: lighter;
+    color: white;
+    z-index: 1;
+}
+.Output{
+    background-color: #6A419A;
+    margin: 0px 0px 0px 10px;
+    display: inline-block;
+    width: 260px;
+    height: 120px;
+    border: #3D087B 1px solid;
+    border-radius: 10px;
+    opacity: 1;
+}
+.output-text{
+    margin: 10px 30px 0px 25px;
+    color: #F25CFE;
+}
+.Set{
+    margin: 0px 0px 0px 125px;
+    width: 300px;
+    position: relative;
+    bottom: 30px;
+    height: 50px;
+    border-radius: 4px;
+    color: white;
+    font-size: 24px;
+    border: #3D087B 1px solid;
+    background-image: linear-gradient(
+        to right,
+        #6E54EC,
+        #CB52F8,
+        #FC5EFF,
+        #F1A7C5
+    );
+}
+.Set:hover{
+    background-image: linear-gradient(
+        to left,
+        #6E54EC,
+        #CB52F8,
+        #FC5EFF,
+        #F1A7C5
+    );
+}
+.Live-Time{
+    margin: 0px 0px 0px 125px;
+    width: 535px;
+    height: 130px;
+    background-color: white;
+    position: relative;
+    bottom: 650px;
+    left: 710px;
+    border-radius: 10px;
+    border: #EDEDED 1px solid;
+    z-index: 7;
+}
+.Time-label{
+    color: #3D087B;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    position: relative;
+    top: 52px;
+    left: 20px;
+}
+.Hours{
+    display: inline-block;
+    position: relative;
+    left: 120px;
+    font-size: 45px;
+    color: #3D087B;
+}
+.Hours-Text{
+    display: inline;
+    position: absolute;
+    font-size: 25px;
+    color: #3D087B;
+    top: 80px;
+    right: 345px;
+}
+.Minutes-Text{
+    display: inline;
+    position: absolute;
+    font-size: 25px;
+    color: #3D087B;
+    top: 80px;
+    right: 235px;
+}
+.Seconds-Text{
+    display: inline;
+    position: absolute;
+    font-size: 25px;
+    color: #3D087B;
+    top: 80px;
+    right: 125px;
+}
+.Minutes{
+    display: inline-block;
+    position: relative;
+    left: 130px;
+    font-size: 45px;
+    color: #3D087B;
+}
+.Seconds{
+    display: inline-block;
+    position: relative;
+    left: 140px;
+    font-size: 45px;
+    color: #3D087B;
+}
+.Day{
+    display: inline-block;
+    position: relative;
+    left: 160px;
+    font-size: 25px;
+    color: #3D087B;
+}
+.Time-text{
+    display: inline-block;
+    position: relative;
+    left: 3px;
+    bottom: 35px;
+    font-size: 30px;
+    color: #3D087B;
+}
+.Time-Display-Text{
+    position: absolute;
+    top:10px;
+    left: 10px;
+    text-align: center;
+}
+.Am-or-Pm{
+    display: inline-block;
+    position: relative;
+    right: 74px;
+    bottom: 34px;
+    font-size: 32px;
+    color: white;
+}
+.Live-Time-Aux1{
+    margin: 0px 0px 0px 125px;
+    width: 415px;
+    height: 130px;
+    background-color: white;
+    position: relative;
+    bottom: 760px;
+    left: 775px;
+    border-radius: 10px;
+    border: #EDEDED 1px solid;
+    z-index: 6;
+    opacity: 0.71;
+}
+.Live-Time-Aux2{
+    margin: 0px 0px 0px 125px;
+    width: 380px;
+    height: 130px;
+    background-color: white;
+    position: relative;
+    bottom: 870px;
+    left: 791px;
+    border-radius: 10px;
+    border: #EDEDED 1px solid;
+    z-index: 5;
+    opacity: 0.22;
+}
+.Activity{
+    margin: 0px 0px 0px 125px;
+    width: 535px;
+    height: 120px;
+    background-color: white;
+    position: relative;
+    bottom: 830px;
+    left: 710px;
+    border-radius: 10px;
+    border: #EDEDED 1px solid;
+    color: #8E53F0;
+    font-size: 30px;
+    font-family: 'Lilita One';font-size: 32px;
+    font-weight: lighter;
+    text-align: center;
+}
+.Activity-Text{
+    position: relative;
+    top: 40px;
+}
+.Activity-Text-Even{
+    position: relative;
+    top: 24px;
+}
+#ActivityImage{
+    margin: 0px 0px 0px 125px;
+    width: 535px;
+    height: 290px;
+    background-color: white;
+    background-image: url(./Component\ 30\ –\ 1.svg);
+    background-size: cover;
+    position: relative;
+    bottom: 810px;
+    left: 710px;
+    border-radius: 10px;
+    border: #EDEDED 1px solid;
+}
+.Activity-Image-Afte{
+    margin: 0px 0px 0px 125px;
+    width: 535px;
+    height: 290px;
+    background-color: white;
+    background-image: url(./Component\ 31\ –\ 1.svg);
+    background-size: cover;
+    position: relative;
+    bottom: 810px;
+    left: 710px;
+    border-radius: 10px;
+    border: #EDEDED 1px solid;
+}
+.Activity-Image-Even{
+    margin: 0px 0px 0px 125px;
+    width: 535px;
+    height: 290px;
+    background-color: white;
+    background-image: url(./lunch_image@2x.png);
+    background-size: cover;
+    position: relative;
+    bottom: 810px;
+    left: 710px;
+    border-radius: 10px;
+    border: #EDEDED 1px solid;
+}
+.Activity-Image-Nigh{
+    margin: 0px 0px 0px 125px;
+    width: 535px;
+    height: 290px;
+    background-color: white;
+    background-image: url(./Component\ 32\ –\ 1.svg);
+    background-size: cover;
+    position: relative;
+    bottom: 810px;
+    left: 710px;
+    border-radius: 10px;
+    border: #EDEDED 1px solid;
 }
