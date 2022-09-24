@@ -7,13 +7,12 @@ function time(){
     var hrs=time.getHours();
     var mins=time.getMinutes();
     var secs=time.getSeconds();
-    var am_pm ="PM";
+    var am_pm ="AM";
     if(hrs==0){
         hrs=12;
     }
     if(hrs>12){
         hrs=hrs-12;
-        am_pm="PM"
     }
     if(hrs<10){
         hrs="0"+hrs;
@@ -24,40 +23,41 @@ function time(){
     if(secs<10){
         secs="0"+secs;
     }
-    Hours.innerText=hrs;
-    Minutes.innerText=mins;
-    Seconds.innerText=secs;
-    AMPM.innerText=am_pm;
+    if(12 <= hrs && hrs < 24){
+        am_pm = "PM"
+    }
+    hours.innerText=hrs;
+    minutes.innerText=mins;
+    seconds.innerText=secs;
+    ampm.innerText=am_pm;
 }
 setInterval(time , 1000)
 time();
 
 function ui(){
     var time=new Date();
-    var hrs=time.getHours();
-    let mssgtext=document.getElementById("Messagetext")
-    let acttext=document.getElementById("ActivityText")
-    let actImg=document.getElementById("ActivityImage")
-    if(hrs=>6 && hrs<12){
-        mssgtext.innerText = "GOOD MORNING!! WAKE UP!!"
-        acttext.innerText = "GRAB SOME HEALTHY BREAKFAST!!!"
-        actImg.style.backgroundImage= "url('./Component\ 30\ –\ 1.svg')";
+    let hrs=time.getHours();
+    if(6 <=hrs && hrs < 12){
+        document.getElementById("Messagetext").innerText = "GOOD MORNING!! WAKE UP!!"
+        document.getElementById("ActivityText").innerText = "GRAB SOME HEALTHY BREAKFAST!!!"
+        document.getElementById("ActivityImage").style.backgroundImage= "url('./Component\ 30\ –\ 1.svg')";
     }
-    else if(hrs=>12 && hrs<17){
-        mssgtext.innerText = "GOOD AFTERNOON !! TAKE SOME SLEEP"
-        acttext.innerText = "LET'S HAVE SOME LUNCH !!"
-        actImg.style.backgroundImage= "url('./Component\ 31\ –\ 1.svg')";
+    else if(12 <=hrs && hrs < 17){
+        document.getElementById("Messagetext").innerText = "GOOD AFTERNOON !! TAKE SOME SLEEP"
+        document.getElementById("ActivityText").innerText = "LET'S HAVE SOME LUNCH !!"
+        document.getElementById("ActivityImage").style.backgroundImage= "url('./Component\ 31\ –\ 1.svg')";
     }
-    else if(hrs=>17 && hrs<19){
-        mssgtext.innerText = "GOOD EVENING !!"
-        acttext.innerText = "STOP YAWNING, GET SOME TEA.. ITS JUST EVENING!"
-        actImg.style.backgroundImage= "url('./lunch_image@2x.png')";
+    else if(17 <= hrs && hrs < 19){
+        document.getElementById("Messagetext").innerText = "GOOD EVENING !!"
+        document.getElementById("ActivityText").innerText = "STOP YAWNING, GET SOME TEA.. ITS JUST EVENING!"
+        document.getElementById("ActivityImage").style.backgroundImage= "url('./lunch_image@2x.png')";
     }
-    else if(hrs=>19 && hrs<6){
-        mssgtext.innerText = "GOOD NIGHT !!"
-        acttext.innerText = "CLOSE YOUR EYES AND GO TO SLEEP"
-        actImg.style.backgroundImage= "url('./Component\ 32\ –\ 1.svg')";
+    else if(19 <= hrs && hrs < 6){
+        document.getElementById("Messagetext").innerText = "GOOD NIGHT !!"
+        document.getElementById("ActivityText").innerText = "CLOSE YOUR EYES AND GO TO SLEEP"
+        document.getElementById("ActivityImage").style.backgroundImage= "url('./Component\ 32\ –\ 1.svg')";
     }
+    hrs=hrs;
 }
 setInterval(ui , 1000)
 ui();
