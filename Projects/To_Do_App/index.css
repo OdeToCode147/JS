@@ -1,0 +1,156 @@
+html,body{
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    background-color: black;
+    color: white;
+}
+.Heading1{
+    width: 100%;
+    margin: 50px 0px 0px 50px;
+    font-weight: bold;
+    font-size: 48px;
+    color: antiquewhite;
+}
+.Heading2{
+    width: 100%;
+    font-size: 48px;
+    color: antiquewhite;
+}
+header{
+    margin-top: 20px;
+    /* filter: blur(5px); */
+}
+.Icon{
+    position: absolute;
+    right: 50px;
+    top: 37px;
+    /* filter: blur(5px); */
+}
+#button-main{
+    font-size: 32px;
+    border-radius: 10px;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    /* filter: blur(5px); */
+}
+.blur{
+    filter: blur(5px);
+}
+.noblur{
+    filter: blur(0px);
+}
+#notask{
+    display: block;
+    text-align: center;
+    font-size: 32px;
+    margin: 38vh;
+}
+.notask:hover{
+    color: rgb(191, 120, 27);
+}
+#pop-up{
+    display: none;
+    margin: 35vh 38vw;
+    font-size: 24px;
+    text-align: center;
+    width: 400px;
+    height: 200px;
+    border-radius: 10px;
+    border: 1px solid grey;
+    background-color: white;
+    color: #00A5EC;
+}
+#pop-up1{
+    display: none;
+    margin: 35vh 38vw;
+    font-size: 24px;
+    text-align: center;
+    width: 400px;
+    height: 200px;
+    border-radius: 10px;
+    border: 1px solid grey;
+    background-color: wheat;
+    color: #00A5EC;
+}
+input{
+    font-size: large;
+    width: 300px;
+    text-align: center;
+}
+.button-style{
+    font-size: 18px;
+    margin: 30px 10px 0 10px;
+    width: 100px;
+    border: 2px solid black;
+    padding: 5px 20px;
+    background-color: #00A5EC;
+    border-radius: 10px;
+    cursor: pointer;
+}
+#card-container{
+    margin: 0px;
+    margin-top: 100px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+#card-item{
+    display: none;
+    text-align: center;
+    margin: 50px 50px;
+    width: 250px;
+    height: 400px;
+    font-size: 22px;
+    color: black;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+.heading{
+    color: rgb(40, 28, 28);
+}
+.fa-square-plus , .fa-trash-can{
+    border: 0px;
+    font-size: 24px;
+    margin: 0px 8px;
+    color: tomato;
+    background-color: transparent;
+    cursor: pointer;
+    position: relative;
+    top: 260px;
+    left: 80px;
+}
+#taskname{
+    display: none;
+    margin: 35vh 38vw;
+    font-size: 24px;
+    text-align: center;
+    width: 400px;
+    height: 200px;
+    border-radius: 10px;
+    border: 1px solid grey;
+    background-color: white;
+    color: #00A5EC;
+}
+.list-components{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 15px;
+}
+.span1{
+    color: burlywood;
+    font-size: 20px;
+    text-align: center;
+}
+.done{
+    background-color: #075767;
+    color: white;
+    padding: 5px 8px;
+    border-radius: 10px;
+    font-size: 12px;
+    margin-left: 15px;
+    cursor: pointer;
+
+}

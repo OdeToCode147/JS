@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <span class="Heading1">Tasks</span>
+        <span class="Heading2">List</span>
+        <div class="Icon">
+            <label for="button-main">
+                <i class="fa-solid fa-circle-plus" style=" font-size: 32px ; color: #00A5EC; cursor: pointer;"></i>
+            </label>
+            <button onclick="addtask()" id="button-main">Add New Task</button>
+        </div>
+    </header>
+
+    <div id="notask">
+        <i>
+            No Items to do in ToDo List
+        </i>
+    </div>
+    <section>
+        <div id="pop-up">
+            <br>
+            <label for="new-list">Start a New List</label>
+            <br><br>
+            <input type="text" name="new-list" id="new-list" placeholder="List Name">
+            <button class="button-style" onclick="start_new_list()">Add</button>
+            <button class="button-style" onclick="return_to_main()">Close</button>
+         </div>
+
+    <div id="card-container">
+    </div>
+    </section>
+    
+    <div id="pop-up1">
+            <h3 id="listname">Add Items</h3>
+            <input type="text" name="new-item" id="new-item" placeholder="Add Item">
+            <button id="addtolist" class="button-style">Add</button>
+            <button class="button-style" onclick="cancel_this()">Cancel</button>
+    </div>
+    <!-- <div id="card-item">
+
+        <h2 id="card-heading">
+            Card Heading
+        </h2>
+
+        <input type="text" id="input-text">
+
+        <button onclick="add()">Add</button>
+
+        <button onclick="cancel()"></button>
+
+        <i class="fa-solid fa-square-plus" onclick=""></i>
+
+        <i class="fa-solid fa-trash-can" onclick=""></i>
+
+    </div>
+
+
+    <div id="taskname">
+
+        <input type="text" id="input-text1">
+
+        <button onclick="add1()">Add</button>
+
+        <button onclick="cancel()"></button>
+
+    </div> -->
+
+
+<script src="https://kit.fontawesome.com/fd4eb62b33.js" crossorigin="anonymous"></script>
+<script src="./index.js"></script>
+</body>
+</html>
